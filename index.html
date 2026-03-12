@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Malaiyappan Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+    /* About Section */
+    .about-mf .box-shadow-full { padding: 4rem 0; }
+    .about-mf .about-img { margin-bottom: 2rem; }
+    .about-mf .about-img img { margin-left: 10px; }
+    .skill-mf .progress { margin: 0.5rem 0 1.2rem; border-radius: 0; height: 0.7rem; }
+    .skill-mf .progress .progress-bar { height: 0.7rem; background-color: #ffbd39; }
+
+    /* Typing animation */
+    #typing-animation { font-size: 30px; font-weight: bold; color: #fff; overflow: hidden; white-space: nowrap; }
+    .zoom-effect { overflow: hidden; transition: transform 0.3s ease-out; }
+    .zoom-effect:hover { transform: scale(1.1); }
+    </style>
+</head>
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">Malaiyappan</a>
+        <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav">
+            <span class="oi oi-menu"></span> Menu
+        </button>
+
+        <div class="collapse navbar-collapse" id="ftco-nav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a href="#home-section" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#about-section" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#resume-section" class="nav-link">Resume</a></li>
+                <li class="nav-item"><a href="#project-section" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="#contact-section" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="home-section" class="hero">
+    <div class="home-slider owl-carousel">
+        <div class="slider-item">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end">
+                    <div class="one-third js-fullheight order-md-last img" style="background-image:url('images/bg_: 1png;');">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="one-forth d-flex align-items-center ftco-animate">
+                        <div class="text">
+                            <span class="subheading">Hello!</span>
+                            <h1 class="mb-4 mt-3">I'm <span>Malaiyappan</span></h1>
+                            <span id="typing-animation"></span>
+                            <script>
+                                const typingAnimationElement = document.getElementById('typing-animation');
+                                const typingTexts = ['SAP Consultant', 'GRN Executive', 'Production Analyst'];
+                                let index = 0, charIndex = 0, forward = true;
+
+                                function typeText() {
+                                    const text = typingTexts[index];
+                                    if(forward) {
+                                        typingAnimationElement.textContent = text.substring(0, charIndex++);
+                                        if(charIndex > text.length) { forward = false; setTimeout(typeText, 1000); return; }
+                                    } else {
+                                        typingAnimationElement.textContent = text.substring(0, charIndex--);
+                                        if(charIndex < 0) { forward = true; index = (index + 1) % typingTexts.length; }
+                                    }
+                                    setTimeout(typeText, 150);
+                                }
+                                typeText();
+                            </script>
+                            <br><br>
+                            <h2>Optimizing SAP & GRN Processes</h2>
+                            <p>
+                                <a href=" https://github.com/malai006" class="btn btn-primary py-3 px-4">GitHub</a>
+                                <a href="#" class="btn btn-white btn-outline-white py-3 px-4">Download CV</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+</section>
+
+<!-- About Section -->
+<section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    <div class="container">
+        <div class="row d-flex align-items-stretch">
+            <div class="col-md-6 col-lg-5 d-flex">
+                <div class="img-about img d-flex align-items-stretch">
+                    <div class="overlay">
+                        <div class="about-img">
+                            <img src="images/about-me.png" class="img-fluid rounded b-shadow-a" alt="Malaiyappan">
+                        </div>
+                        <div class="skill-mf">
+                            <p class="title-s">Skills</p>
+                            <span>SAP</span> <span class="pull-right">90%</span>
+                            <div class="progress">
+                                <div class="progress-bar" style="width:90%;"></div>
+                            </div>
+                            <span>GRN Process</span> <span class="pull-right">85%</span>
+                            <div class="progress">
+                                <div class="progress-bar" style="width:85%;"></div>
+                            </div>
+                            <span>Production Support</span> <span class="pull-right">80%</span>
+                            <div class="progress">
+                                <div class="progress-bar" style="width:80%;"></div>
+                            </div>
+                            <span>MS Office</span> <span class="pull-right">95%</span>
+                            <div class="progress">
+                                <div class="progress-bar" style="width:95%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+                <div class="row justify-content-start pb-3">
+                    <div class="col-md-12 heading-section ftco-animate">
+                        <h1 class="big">About</h1>
+                        <h2 class="mb-4">About Me</h2>
+                        <p>
+                            Motivated SAP Consultant and Process Specialist with experience in GRN processes and production support. 
+                            Passionate about improving operational efficiency and delivering impactful results through continuous learning.
+                        </p>
+                        <ul class="about-info mt-4 px-md-0 px-2">
+                            <li class="d-flex"><span>Profile:</span> <span>SAP & Operations Specialist</span></li>
+                            <li class="d-flex"><span>Education:</span> <span>Diploma in Electrical & Communication Engineering</span></li>
+                            <li class="d-flex"><span>Experience:</span> <span>4+ Years in Manufacturing & Process Support</span></li>
+                            <li class="d-flex"><span>Languages:</span> <span>Tamil, English</span></li>
+                            <li class="d-flex"><span>Interest:</span> <span>Continuous Learning, Process Optimization</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Resume Section -->
+<section class="ftco-section ftco-no-pb" id="resume-section">
+    <div class="container">
+        <div class="row justify-content-center pb-5">
+            <div class="col-md-10 heading-section text-center ftco-animate">
+                <h1 class="big big-2">Resume</h1>
+                <h2 class="mb-4">Resume</h2>
+                <p>Experienced professional specializing in SAP, GRN, and production support processes, focused on delivering operational excellence.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="resume-wrap ftco-animate">
+                    <span class="date">2021-Present</span>
+                    <h2>SAP Consultant / Specialist</h2>
+                    <span class="position">YAZAKI India Pvt. Ltd</span>
+                    <p>Leading SAP process improvements and supporting production operations. Key contributions:</p>
+                    <ul>
+                        <li>Optimized GRN processes to enhance efficiency and accuracy.</li>
+                        <li>Provided production support analysis and resolved operational bottlenecks.</li>
+                        <li>Automated process tasks using SAP tools for faster execution.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="resume-wrap ftco-animate">
+                    <span class="date">2021-Present</span>
+                    <h2>GRN Process Executive</h2>
+                    <span class="position">YAZAKI India Pvt. Ltd</span>
+                    <p>Managed goods receipt notes and inventory tracking. Achievements:</p>
+                    <ul>
+                        <li>Streamlined GRN processes improving reporting efficiency by 25%.</li>
+                        <li>Provided training and mentorship to new team members.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <h1 class="big-4">Education</h1>
+            <div class="underline"></div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-md-6">
+                <div class="resume-wrap ftco-animate">
+                    <span class="date">2019-2021</span>
+                    <h2>Diploma in Electrical & Communication Engineering</h2>
+                    <span class="position">Krishnasamy College of Engineering & Technology</span>
+                    <p>Grade: 88.9%</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="resume-wrap ftco-animate">
+                    <span class="date">2018-2019</span>
+                    <h2>HSC</h2>
+                    <span class="position">Govt Boys HR Sec School, Puthupettai</span>
+                    <p>Grade: 51.3%</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section class="ftco-section" id="project-section">
+    <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+            <div class="col-md-7 heading-section text-center ftco-animate">
+                <h1 class="big big-2">Projects</h1>
+                <h2 class="mb-4">Projects</h2>
+                <p>Sample projects demonstrating process optimization and automation.</p>
+            </div>
+        </div>
+        <div class="row d-flex">
+            <div class="col-md-4 d-flex ftco-animate">
+                <div class="blog-entry justify-content-end">
+                    <a href="#" class="block-20 zoom-effect" style="background-image: url('images/proj_1.png');"></a>
+                    <div class="text mt-3 float-right d-block">
+                        <h3 class="heading"><a href="#">Industrial Safety using Fire & Gas Detection</a></h3>
+                        <p>Mini project during Diploma course to ensure safety using sensor systems.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex ftco-animate">
+                <div class="blog-entry justify-content-end">
+                    <a href="#" class="block-20 zoom-effect" style="background-image: url('images/proj_2.png');"></a>
+                    <div class="text mt-3 float-right d-block">
+                        <h3 class="heading"><a href="#">SAP Process Automation</a></h3>
+                        <p>Automated SAP processes during professional experience for efficiency.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex ftco-animate">
+                <div class="blog-entry justify-content-end">
+                    <a href="#" class="block-20 zoom-effect" style="background-image: url('images/proj_3.png');"></a>
+                    <div class="text mt-3 float-right d-block">
+                        <h3 class="heading"><a href="#">GRN Process Optimization</a></h3>
+                        <p>Optimized goods receipt note processes in professional setting.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+    <div class="container">
+        <div class="row justify-content-center mb-5 pb-3">
+            <div class="col-md-7 heading-section text-center ftco-animate">
+                <h1 class="big big-2">Contact</h1>
+                <h2 class="mb-4">Contact Me</h2>
+                <p>Reach out to me using the details below!</p>
+            </div>
+        </div>
+        <div class="row d-flex contact-info mb-5">
+            <div class="col-md-3 d-flex ftco-animate">
+                <div class="align-self-stretch box p-4 text-center">
+                    <div class="icon d-flex align-items-center justify-content-center">
+                        <span class="icon-map-signs"></span>
+                    </div>
+                    <h3 class="mb-4">Address</h3>
+                    <p>Chennai, India</p>
+                </div>
+            </div>
+            <div class="col-md-3 d-flex ftco-animate">
+                <div class="align-self-stretch box p-4 text-center">
+                    <div class="icon d-flex align-items-center justify-content-center">
+                        <span class="icon-phone2"></span>
+                    </div>
+                    <h3 class="mb-4">Phone</h3>
+                    <p><a href="tel://+911234567890">+91 8072799208</a></p>
+                </div>
+            </div>
+            <div class="col-md-3 d-flex ftco-animate">
+                <div class="align-self-stretch box p-4 text-center">
+                    <div class="icon d-flex align-items-center justify-content-center">
+                        <span class="icon-paper-plane"></span>
+                    </div>
+                    <h3 class="mb-4">Email</h3>
+                    <p><a href="mailto:malaiyappan@email.com">malaiyappan2002@email.com</a></p>
+                </div>
+            </div>
+            <div class="col-md-3 d-flex ftco-animate">
+                <div class="align-self-stretch box p-4 text-center">
+                    <div class="icon d-flex align-items-center justify-content-center">
+                        <span class="icon-globe"></span>
+                    </div>
+                    <h3 class="mb-4">Resume</h3>
+                    <p><a href="#">Download CV</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="ftco-footer ftco-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Made with <i class="icon-heart color-danger"></i></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- JS Files -->
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-migrate-3.0.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/jquery.stellar.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/aos.js"></script>
+<script src="js/jquery.animateNumber.min.js"></script>
+<script src="js/scrollax.min.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
